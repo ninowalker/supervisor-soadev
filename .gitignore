@@ -1,0 +1,10 @@
+/dist/
+/supervisord.log
+/supervisord.pid
+
+/*.egg-info
+*.pyc
+.pyenv
+*~
+/env
+/.coverage
