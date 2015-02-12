@@ -64,7 +64,7 @@ class SOADevControllerPlugin(ControllerPluginBase):
     def do_soagraph(self, arg):
         a = []
         for s in sorted(self.sets):
-            a.append("%s: %s" % (s, ", ".join(self._unpack(s)))) 
+            a.append("%s:\n  %s\n" % (s, "\n  ".join(self._unpack(s))))
         self.ctl.output('\n'.join(a))
 
     def help_soagraph(self):
