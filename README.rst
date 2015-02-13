@@ -10,14 +10,15 @@ Description
 ===========
 
 Groups in Supervisor_ are exclusive sets. As a developer on an SOA
-project comprised of many heterogeneous microservices_, the venn diagram of a
-processes to a particular application feature varies
-significantly. Adding mock services makes it more complicated to
+project comprised of many heterogeneous microservices_, the venn diagram of
+processes supporting a particular application feature varies
+significantly; when integration testing, this is particularly important.
+Adding further complications, mock services make it even challenging to
 manage a working set. This plugin adds a powerful expressiveness to
-simplify the lives of mere mortals.
+simplify the lives of mere mortals in a large collaborative environment.
 
-The plugin patches the default `status`, `start`, `restart`, and `stop`, to allow
-you to operate on these high-level, non-exclusive sets transparently.
+Specifically, the plugin patches the default `status`, `start`, `restart`, and `stop`, to allow
+you to operate on high-level, non-exclusive sets of processes transparently.
 
 
 Installation
