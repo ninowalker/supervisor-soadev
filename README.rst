@@ -3,8 +3,8 @@ Supervisor SOA
 ====================
 
 Adds a graph-based set abstraction to Supervisor_. Instead of issuing
-commands to a process, or group, you can issue commands to a logical
-set, which can be described as a DAG_.
+commands to a process, or group, you can issue commands to logical
+sets, which can be described as a DAG_.
 
 Description
 ===========
