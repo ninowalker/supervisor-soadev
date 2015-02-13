@@ -13,7 +13,7 @@ Groups in Supervisor_ are exclusive sets. As a developer on an SOA
 project comprised of many heterogeneous microservices_, the venn diagram of
 processes supporting a particular application feature varies
 significantly; when integration testing, this is particularly important.
-Adding further complications, mock services make it even challenging to
+Adding further complications, mock services make it even more challenging to
 manage a working set. This plugin adds a powerful expressiveness to
 simplify the lives of mere mortals in a large collaborative environment.
 
