@@ -2,7 +2,7 @@ from threading import Thread
 import functools
 from collections import defaultdict
 from supervisor.supervisorctl import ControllerPluginBase
-
+from supervisorsoadev.unpack import unpack_symbols
 
 class SOADevControllerPlugin(ControllerPluginBase):
     name = 'soadev'
@@ -17,25 +17,7 @@ class SOADevControllerPlugin(ControllerPluginBase):
             self.graph[node].update(map(str.strip, edges.split(",")))
 
     def _unpack(self, *keys):
-        procs = []
-        seen = set()
-        for key in keys:
-            if not key or key in seen:
-                continue
-            if key not in self.sets:
-                seen.add(key)
-                procs.append(key)
-                continue
-            stack = set(self.graph[key])
-            while len(stack):
-                key = stack.pop()
-                if key in seen:
-                    continue
-                seen.add(key)
-                if key not in self.sets:
-                    procs.insert(0, key)
-                stack.update(self.graph[key])
-        return procs
+        return unpack_symbols(self.sets, self.graph, *keys)
 
     def _expand(self, arg, command):
         keys = map(str.strip, arg.split())
