@@ -11,7 +11,7 @@ elif (3, 0) < py_version < (3, 2):
     raise RuntimeError(
         'On Python 3, supervisor-soadev requires Python 3.2 or later')
 
-VERSION = (0, 1, 0)
+VERSION = (0, 1, 1)
 __version__ = VERSION
 __versionstr__ = '.'.join(map(str, VERSION))
 
